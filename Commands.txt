@@ -103,3 +103,79 @@ gzip file_name => zip file_name
 gzip -d file_name.gz => unzip file_name.gz
 
 cd / => go to the root
+
+cat /etc/group => show the groups content in system
+
+cat /etc/passwd => show the passwords in system
+
+sudo cat /etc/group => show the hex passwords content in system
+
+sudo useradd user_name => add a new user_name user to the /etc/passwd
+
+sudo useradd -m user_name => add a new user_name user to the /etc/passwd and make a diractory for that user
+
+sudo useradd user_name -e 10-10-2025 => add a new user_name user to the /etc/passwd with expire date 10-10-2025
+
+sudo useradd user_name -g root => add a new user_name user to the /etc/passwd in group root
+
+sudo passwd user_name => set a password for user_name user
+
+sudo passwd -d user_name => delete user_name user password
+
+sudo userdel user_name => delete user_name user from /etc/passwd
+
+id => show the uid, gid and .. for the current user
+
+sudo groupadd group_name => add group_name group
+
+sudo groupdel group_name => delete group_name group
+
+sudo groupadd -g800 group_name => add group_name group with gid 800
+
+sudo groupmod -n new_group_name group_name => change the name of group group_name to new_group_name
+
+sudo usermod -G root user_name => add user_name user to the group root
+
+sudo usermod -L user_name => Lock the user_name user
+
+sudo usermod -U user_name => Unlock the user_name user
+
+ls -ltrh => show the list of the files in current diractory, additional their owners and groups
+
+sudo chown owner_name file_name => change the owner of the file_name file to owner_name owner
+
+sudo chgrp group_name file_name => change the group of the file_name file to group_name group
+
+sudo chmod permision_number file_name => give the permision_number permision to the file_name (permision_number is a linux permision number, for exapmle 770)
+
+ifconfig => show the interfaces of network cards and their IPs
+
+ifconfig => show the interfaces of network cards and their IPs (show the disables too)
+
+ifdown network_card_name => disable network_card_name network card
+
+ifup network_card_name => enable network_card_name network card
+
+sudo ifconfig network_card_name new_ip_address netmask netmask_number => cahnge the ip address of network_card_name to new_ip_address, with netmask_number netmask
+
+sudo apt-get install gcc => update the kernel tools
+
+mv diractory_name .diractory_name => hide diractory_name diractory
+
+mv .diractory_name diractory_name => unhide .diractory_name diractory
+
+uniq -c file_name => show the file_name numbers with their repeated number
+
+uniq -d file_name => show the file_name repeated numbers
+
+uniq -D file_name => show the file_name repeated numbers and their repeated
+
+uniq -u file_name => show the file_name numbers without repeated numbers
+
+uniq -u file_name > file_name => show the file_name numbers without repeated numbers and move them to the file_name
+
+diff file_name file_name => show the differences between tow file
+
+finger user_name => show the loggin information about user_name user
+
+w => show the information about all users in systemgi
